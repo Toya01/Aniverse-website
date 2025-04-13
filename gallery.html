@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ANIVERSE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --secondary: #ff2e63;
+            --accent: #00fff2;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease;
+        }
+
+        .cursor-follower {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+        }
+
+        .gallery-container {
+            padding: 6rem 2rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            background: rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+            filter: blur(8px);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+            filter: blur(0);
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::after {
+            opacity: 0.7;
+        }
+
+        .gallery-item-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem;
+            z-index: 1;
+            transform: translateY(0);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item-content h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--light);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .gallery-item-content p {
+            color: var(--light);
+            opacity: 0.9;
+            font-size: 0.9rem;
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .back-btn {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <a href="aniverse.html" class="back-btn">← Back</a>
+
+    <div class="gallery-container">
+        <h1>Community Gallery</h1>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="C:\Users\toyac\OneDrive\Desktop\Aniverse\Welcome.jpg" alt="Gallery Image 2">
+                <div class="gallery-item-content">
+                    <h3>Welcome to ANIVERSE</h3>
+                    <p>This is the welcome message that we send to the community when they join the server. We do this to make them feel welcome and to help them get to know the community.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\toyac\OneDrive\Desktop\Aniverse\Events.jpg" alt="Gallery Image 3">
+                <div class="gallery-item-content">
+                    <h3>Community Events</h3>
+                    <p>Join our exciting community events! From gaming tournaments and anime watch parties to art contests and music nights. We host regular events to bring our community together and create memorable experiences. Check our events channel for upcoming activities!</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\toyac\OneDrive\Desktop\Aniverse\Nitro.jpg" alt="Gallery Image 1">
+                <div class="gallery-item-content">
+                    <h3>Nitro Drops</h3>
+                    <p>Nitro Drops are a way for the community to get a chance to get a nitro for free. We do this by having a giveaway every month. The giveaway is open to everyone and the winner will be chosen by a random number generator.</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\toyac\OneDrive\Desktop\Aniverse\Art.png" alt="Gallery Image 5">
+                <div class="gallery-item-content">
+                    <h3>Art Contest</h3>
+                    <p>Show off your favorite anime characters at our annual cosplay showcase! Join fellow cosplayers in a celebration of creativity and fandom. Share your costumes, participate in competitions, and win exciting prizes. Whether you're a seasoned cosplayer or just starting out, there's a place for everyone in our cosplay community!</p>
+                </div>
+                
+            </div>
+            <div class="gallery-item">
+                <img src="C:\Users\toyac\OneDrive\Desktop\Aniverse\Music.png" alt="Gallery Image 4">
+                <div class="gallery-item-content">
+                    <h3>Music Night</h3>
+                    <p>Join our music night every week! We have a variety of music genres and we play them all night long. We also have a music bot that we use to play the music. You can request a song and we will play it for you.</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+
+    <script>
+        // Custom cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 

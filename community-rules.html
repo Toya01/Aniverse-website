@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Rules - ANIVERSE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --secondary: #ff2e63;
+            --accent: #00fff2;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --light: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .cursor {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.2s ease;
+        }
+
+        .cursor-follower {
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+        }
+
+        .rules-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 3rem;
+        }
+
+        .rules-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .rules-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .rule-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--primary);
+        }
+
+        .rule-item h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--light);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .rule-item p {
+            color: var(--light);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .important-note {
+            background: rgba(255, 46, 99, 0.1);
+            border-left: 3px solid var(--secondary);
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 5px;
+        }
+
+        .important-note h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .important-note ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .rules-section {
+                padding: 1.5rem;
+            }
+
+            .back-btn {
+                top: 1rem;
+                left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <a href="aniverse.html" class="back-btn">← Back</a>
+
+    <div class="rules-container">
+        <h1>Community Rules</h1>
+        
+        <div class="rules-section">
+            <h2>General Guidelines</h2>
+            <div class="rule-item">
+                <h3>1. Be Respectful</h3>
+                <p>Treat all members with respect. No harassment, hate speech, or discrimination of any kind will be tolerated.</p>
+            </div>
+            <div class="rule-item">
+                <h3>2. Keep it Clean</h3>
+                <p>No NSFW content, excessive profanity, or inappropriate discussions. Keep the chat family-friendly.</p>
+            </div>
+            <div class="rule-item">
+                <h3>3. No Spam</h3>
+                <p>Avoid excessive messages, repeated content, or unnecessary mentions. Use appropriate channels for your content.</p>
+            </div>
+        </div>
+
+        <div class="rules-section">
+            <h2>Content Guidelines</h2>
+            <div class="rule-item">
+                <h3>1. Anime & Gaming Focus</h3>
+                <p>Keep discussions related to anime, gaming, and community events. Use appropriate channels for off-topic discussions.</p>
+            </div>
+            <div class="rule-item">
+                <h3>2. Art & Media</h3>
+                <p>Share your art and media in designated channels. Credit original creators when sharing others' work.</p>
+            </div>
+            <div class="rule-item">
+                <h3>3. Voice Channels</h3>
+                <p>Be mindful of others in voice channels. Keep noise levels reasonable and respect quiet hours.</p>
+            </div>
+        </div>
+
+        <div class="rules-section">
+            <h2>Event Participation</h2>
+            <div class="rule-item">
+                <h3>1. Fair Play</h3>
+                <p>No cheating or exploiting in gaming events. Play fair and respect other participants.</p>
+            </div>
+            <div class="rule-item">
+                <h3>2. Giveaways</h3>
+                <p>Follow giveaway rules carefully. No alt accounts or rule manipulation will be tolerated.</p>
+            </div>
+            <div class="rule-item">
+                <h3>3. Event Behavior</h3>
+                <p>Be sportsmanlike during events. Respect moderators and follow event-specific rules.</p>
+            </div>
+        </div>
+
+        <div class="important-note">
+            <h3>Important Note</h3>
+            <p>Failure to follow these rules may result in warnings, temporary mutes, or permanent bans depending on the severity of the violation. Moderators have the final say in all situations.</p>
+        </div>
+    </div>
+
+    <script>
+        // Custom cursor
+        const cursor = document.querySelector('.cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+    </script>
+</body>
+</html> 
